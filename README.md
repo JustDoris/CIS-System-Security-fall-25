@@ -59,7 +59,7 @@ This project uses Docker's custom bridge networks to create three fully isolated
 +---------------+               +---------------+              +---------------+
 ```
 
-## 🚀 Quickstart
+##  Quickstart
 
 This entire lab can be built and deployed with a single command.
 
@@ -91,7 +91,7 @@ This entire lab can be built and deployed with a single command.
 
 -----
 
-## 📌 The 18-Day Project Sprint
+##  The 18-Day Project Sprint
 
 ### Sprint 1: Documentation & Baseline (Days 1-5)
 
