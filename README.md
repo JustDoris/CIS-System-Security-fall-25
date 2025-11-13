@@ -89,9 +89,9 @@ This entire lab can be built and deployed with a single command.
 
 -----
 
-##  The 18-Day Project Sprint
+##  Project Milestones
 
-### Sprint 1: Documentation & Baseline (Days 1-5)
+### Milestone 1: Documentation & Baseline (Days 1-5)
 
 **Goal:** Document the lab as-built and establish a baseline of isolation.
 
@@ -109,7 +109,7 @@ This entire lab can be built and deployed with a single command.
       * Capture screenshots of the failed ping tests from Task 4.
       * Upload screenshots to the `Network Architecture` Wiki page as "Proof of Initial Segmentation."
 
-### Sprint 2: Implement, Attack & Defend (Days 6-12)
+### Milestone 2: Implement, Attack & Defend (Days 6-12)
 
 **Goal:** Build the firewall rules, configure the IDS, and execute simulated attacks to validate the defenses.
 
@@ -139,7 +139,7 @@ This entire lab can be built and deployed with a single command.
   * **Task 10 (Log Evidence):** [Lead: **Asia**]
       * Upload all screenshots from Task 9 to the `Incident Log` Wiki page, creating one entry per attack.
 
-### Sprint 3: Final Report & Presentation (Days 13-18)
+### Milestone 3: Final Report & Presentation (Days 13-18)
 
 **Goal:** Synthesize all documentation and evidence into a professional final presentation.
 
