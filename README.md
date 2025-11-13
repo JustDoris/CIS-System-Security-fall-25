@@ -155,11 +155,3 @@ This entire lab can be built and deployed with a single command.
       * **Flow:** Esai (Intro/Architecture), Asia (Case Studies/Evidence), Nathaniel (Live Demo).
   * **Task 15 (Day 18):**
       * Deliver final presentation to the professor.
-
-## Final Deliverables
-
-1.  A fully functional, containerized network lab defined in `docker-compose.yml`.
-2.  A complete GitHub repository containing all code and documentation.
-3.  A populated GitHub Wiki detailing the project's architecture, firewall rules, attack plans, and incident logs.
-4.  A final presentation slide deck.
-5.  A live, 10-minute demonstration of the Red Team attacking and the Blue Team's IDS/firewall detecting and blocking the attack in real-time.
