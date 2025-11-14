@@ -98,8 +98,6 @@ This entire lab can be built and deployed with a single command.
   * **Task 1 (GitHub Setup):** [Lead: **Nathaniel**]
       * Create the GitHub repository, push initial files (`docker-compose.yml`, `router-ids/Dockerfile`, `kali-attacker/Dockerfile`).
       * Set up GitHub Issues and Milestones for all tasks in this plan.
-  * **Task 2 (Project README):** [Lead: **Asia**]
-      * Write the new `README.md` file (this file\!) based on the Docker architecture, replacing all old VirtualBox/pfSense content.
   * **Task 3 (GitHub Wiki Creation):** [Lead: **Esai**]
       * Enable and structure the GitHub Wiki with five key pages: `Home`, `Network Architecture`, `Firewall & IDS Configuration`, `Attack Plan`, and `Incident Log & Case Studies`.
   * **Task 4 (Baseline Test & Diagram):** [Lead: **Esai**, **Nathaniel**]
