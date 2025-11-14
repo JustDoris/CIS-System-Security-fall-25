@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  # 1. The Firewall/Router/IDS Container
+  router-ids:
+    build: ./router-ids
+    container_name: router-ids
+    privileged: true
+    sysctls:
+      - net.ipv4.ip_forward=1
+    networks:
+      - staff_net
+      - servers_net
+      - iot_net
+    tty: true
+
+  # 2. The "Staff PC" (Windows 10 replacement)
+  # Access this in your host browser: http://localhost:6080
+  staff-pc:
+    image: dorowu/ubuntu-desktop-lxde-vnc:latest
+    container_name: staff-pc
+    networks:
+      staff_net:
+        ipv4_address: 192.168.10.10
+    ports:
+      - "6080:80"
+    shm_size: '2g' # Recommended for browser-based VNC
+
+  # 3. The "Server" (Vulnerable Web Application)
+  web-server:
+    image: bkimminich/juice-shop:latest
+    container_name: web-server
+    networks:
+      servers_net:
+        ipv4_address: 192.168.20.10
+
+  # 4. The "Attacker / IoT" Machine
+  kali-attacker:
+    build: ./kali-attacker
+    container_name: attacker
+    networks:
+      iot_net:
+        ipv4_address: 192.168.30.10
+    tty: true
+    stdin_open: true
+
+networks:
+  staff_net:
+    driver: bridge
+    internal: true  # This is crucial for isolation
+    ipam:
+      config:
+        - subnet: 192.168.10.0/24
+          gateway: 192.168.10.1
+
+  servers_net:
+    driver: bridge
+    internal: true
+    ipam:
+      config:
+        - subnet: 192.168.20.0/24
+          gateway: 192.168.20.1
+
+  iot_net:
+    driver: bridge
+    internal: true
+    ipam:
+      config:
+        - subnet: 192.168.30.0/24
+          gateway: 192.168.30.1
