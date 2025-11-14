@@ -144,12 +144,3 @@ This entire lab can be built and deployed with a single command.
   * **Task 11 (Write Case Studies):** [Lead: **Asia**]
       * Convert the `Incident Log` entries into 2-3 formal "Case Studies" on the Wiki.
       * **Template:** *Attack Scenario*, *Red Team Action* (Esai's command), *Blue Team Defense* (Nathaniel's `iptables` rule), *Evidence* (her screenshots), *Conclusion*.
-  * **Task 12 (Build Presentation Slides):** [Lead: **Esai**]
-      * Build the final PowerPoint/Google Slides deck using all the content from the GitHub Wiki.
-  * **Task 13 (Finalize Repository):** [Lead: **Nathaniel**]
-      * Clean up this `README.md` file and ensure the "How to Run" steps are perfect.
-  * **Task 14 (Rehearse Final Demo):** [Lead: **All**]
-      * Practice the final presentation and live demo.
-      * **Flow:** Esai (Intro/Architecture), Asia (Case Studies/Evidence), Nathaniel (Live Demo).
-  * **Task 15 (Day 18):**
-      * Deliver final presentation to the professor.
