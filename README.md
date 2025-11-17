@@ -98,12 +98,12 @@ This entire lab can be built and deployed with a single command.
   * **Task 1 (GitHub Setup):** [Lead: **Nathaniel**]
       * Create the GitHub repository, push initial files (`docker-compose.yml`, `router-ids/Dockerfile`, `kali-attacker/Dockerfile`).
       * Set up GitHub Issues and Milestones for all tasks in this plan.
-  * **Task 3 (GitHub Wiki Creation):** [Lead: **Esai**]
+  * **Task 2 (GitHub Wiki Creation):** [Lead: **Esai**]
       * Enable and structure the GitHub Wiki with five key pages: `Home`, `Network Architecture`, `Firewall & IDS Configuration`, `Attack Plan`, and `Incident Log & Case Studies`.
-  * **Task 4 (Baseline Test & Diagram):** [Lead: **Esai**, **Nathaniel**]
+  * **Task 3 (Baseline Test & Diagram):** [Lead: **Esai**, **Nathaniel**]
       * `docker exec` into the `attacker` container and confirm pings to `192.168.20.10` (server) and `192.168.10.10` (staff) **fail**.
       * Create the final `Network Architecture` diagram (like the one above) and post it to the Wiki.
-  * **Task 5 (Document Baseline):** [Lead: **Asia**]
+  * **Task 4 (Document Baseline):** [Lead: **Asia**]
       * Capture screenshots of the failed ping tests from Task 4.
       * Upload screenshots to the `Network Architecture` Wiki page as "Proof of Initial Segmentation."
 
@@ -111,36 +111,36 @@ This entire lab can be built and deployed with a single command.
 
 **Goal:** Build the firewall rules, configure the IDS, and execute simulated attacks to validate the defenses.
 
-  * **Task 6 (Firewall Implementation - Blue Team):** [Lead: **Nathaniel**]
+  * **Task 5 (Firewall Implementation - Blue Team):** [Lead: **Nathaniel**]
       * `exec` into the `router-ids` container.
       * Use `iptables` to write and test the firewall policy.
       * **Rule 1:** Allow `staff_net` (192.168.10.0/24) to access `servers_net` (192.168.20.0/24).
       * **Rule 2:** Block `iot_net` (192.168.30.0/24) from accessing *any* other internal network.
       * **Deliverable:** Post the final, working `iptables` script to the `Firewall & IDS Configuration` Wiki page.
-  * **Task 7 (Define Attack Plan - Red Team):** [Lead: **Esai**]
+  * **Task 6 (Define Attack Plan - Red Team):** [Lead: **Esai**]
       * Research and document 2-3 specific attack scenarios on the `Attack Plan` Wiki page.
       * **Scenario 1 (Recon):** `nmap -sS 192.168.20.10` to scan the server.[1, 2, 3]
       * **Scenario 2 (Exploitation):** Use browser on Staff PC (`http://localhost:6080`) to find a login page on the Juice Shop and attempt a basic SQL injection.[4]
       * **Scenario 3 (Repeat Recon):** Re-run `nmap` scan from `attacker` to prove it is now blocked by the firewall.
-  * **Task 8 (Configure IDS - Blue Team):** [Lead: **Nathaniel**]
+  * **Task 7 (Configure IDS - Blue Team):** [Lead: **Nathaniel**]
       * `exec` into `router-ids`.
       * Run `suricata-update` to download rules.
       * Run Suricata to listen on all internal interfaces (`eth0`, `eth1`, `eth2`).
       * Open the live alert log: `tail -f /var/log/suricata/fast.log`.
-  * **Task 9 (Coordinated Attack & Defense):** [Lead: **All**]
+  * **Task 8 (Coordinated Attack & Defense):** [Lead: **All**]
       * **Red Team (Esai):** `exec` into `attacker` and execute attack scenarios from Task 7.
       * **Blue Team (Nathaniel):** `exec` into `router-ids` and watch the `tail -f` Suricata log for alerts.
       * **Analyst (Asia):** Screen-share and capture screenshots of:
         1.  Esai's terminal (showing the attack).
         2.  Nathaniel's terminal (showing the real-time `iptables` logs or Suricata alerts).
         3.  The VNC Staff PC (`localhost:6080`) showing the successful SQL injection.
-  * **Task 10 (Log Evidence):** [Lead: **Asia**]
+  * **Task 9 (Log Evidence):** [Lead: **Asia**]
       * Upload all screenshots from Task 9 to the `Incident Log` Wiki page, creating one entry per attack.
 
 ### Milestone 3: Final Report & Presentation
 
 **Goal:** Synthesize all documentation and evidence into a professional final presentation.
 
-  * **Task 11 (Write Case Studies):** [Lead: **Asia**]
+  * **Task 10 (Write Case Studies):** [Lead: **Asia**]
       * Convert the `Incident Log` entries into 2-3 formal "Case Studies" on the Wiki.
       * **Template:** *Attack Scenario*, *Red Team Action* (Esai's command), *Blue Team Defense* (Nathaniel's `iptables` rule), *Evidence* (her screenshots), *Conclusion*.
